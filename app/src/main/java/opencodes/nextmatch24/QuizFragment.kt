@@ -22,7 +22,9 @@ class QuizFragment : Fragment() {
     }
 
     fun nextQuestion() {
-        counter++
+        if(counter + 1 < questions.size) {
+            counter++
+        }
         var questionLabel = activity.findViewById<TextView>(R.id.QuestionTextView)
         questionLabel.setText(questions.get(counter).question)
     }
