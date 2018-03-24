@@ -33,9 +33,9 @@ class QuizFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        var layout : LinearLayout = (activity).findViewById(R.id.AnswerLayout)
+        var layout : ViewGroup = (activity).findViewById(R.id.AnswerLayout)
         var newObj = PointView(context, this)
         //coLayout.removeAllViews()
-        layout.addView(newObj, 0)
+        layout.addView(newObj, -1, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT))
     }
 }
