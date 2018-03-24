@@ -21,7 +21,7 @@ class QuizFragment : Fragment() {
         return rootView
     }
 
-    fun onNextQuestion() {
+    fun nextQuestion() {
         counter++
         var questionLabel = activity.findViewById<TextView>(R.id.QuestionTextView)
         questionLabel.setText(questions.get(counter).question)
@@ -32,7 +32,7 @@ class QuizFragment : Fragment() {
     override fun onStart() {
         super.onStart()
         var layout : LinearLayout = (activity).findViewById(R.id.AnswerLayout)
-        var newObj = PointView(context)
+        var newObj = PointView(context, this)
         //coLayout.removeAllViews()
         layout.addView(newObj, 0)
     }
