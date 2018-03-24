@@ -11,6 +11,6 @@ class AskFragment : Fragment() {
     var questions: MutableList<Question> = mutableListOf()
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater!!.inflate(R.layout.tab_fragment_match, container, false)
+        return inflater!!.inflate(R.layout.tab_fragment_ask, container, false)
     }
 }
