@@ -9,12 +9,13 @@
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/questionTextFieldLayout"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="70dp"
         android:paddingHorizontal="0dp"
         android:paddingVertical="0dp"
         app:counterEnabled="true"
@@ -22,11 +23,10 @@
 
         <EditText
             android:id="@+id/questionTextField"
-            android:layout_width="300dp"
+            android:layout_width="362dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:background="@drawable/question_field"
-            android:hint="Question"
             android:maxLines="3"
             android:minLines="1"
             android:paddingHorizontal="10dp"
@@ -45,4 +45,12 @@
         android:layout_below="@+id/questionTextFieldLayout"
         android:layout_marginTop="88dp"
         android:text="Send" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/questionTextFieldLayout"
+        android:layout_marginTop="30dp"
+        android:text="You want to ask your own Question? Just type it in and be patient for new matches:" />
 </RelativeLayout>
