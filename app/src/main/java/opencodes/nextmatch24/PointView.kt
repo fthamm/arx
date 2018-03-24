@@ -4,6 +4,8 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.support.v4.content.ContextCompat
+import android.text.TextPaint
+import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
@@ -43,7 +45,7 @@ class PointView: View{
     fun init() {
         whitePaint.setARGB (255, 255, 255, 255)
         whitePaint.setStyle(Paint.Style.FILL)
-        redPaint.setColor(ContextCompat.getColor(context, R.color.colorPrimary))
+        redPaint.color = ContextCompat.getColor(context, R.color.colorPrimary);
         redPaint.setStyle(Paint.Style.FILL)
     }
 
