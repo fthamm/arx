@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 
 class QuizFragment : Fragment() {
 
@@ -15,9 +16,9 @@ class QuizFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        var coLayout : CoordinatorLayout = (activity).findViewById(R.id.choose)
-        var newObj: PointView = PointView(context)
-        coLayout.addView(newObj)
-
+        var layout : LinearLayout = (activity).findViewById(R.id.AnswerLayout)
+        var newObj = PointView(context)
+        //coLayout.removeAllViews()
+        layout.addView(newObj, 0)
     }
 }

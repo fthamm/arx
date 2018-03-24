@@ -14,11 +14,15 @@ import android.view.View
 
 class PointView: View{
 
-    var mTextPaint: TextPaint = TextPaint()
+    var whitePaint: Paint = Paint()
+    var redPaint: Paint = Paint()
+    var r: Float = 48F
+
     var x0: Float = Float.MAX_VALUE
     var y0: Float = Float.MAX_VALUE
 
     constructor(context: Context): super(context) {
+        init()
         setOnTouchListener(object : View.OnTouchListener {
             override fun onTouch(v: View?, event: MotionEvent): Boolean {
                 Log.e("clicked", event.actionMasked.toString())
@@ -29,7 +33,7 @@ class PointView: View{
 
 
                 if(event.actionMasked == MotionEvent.ACTION_UP)
-                    Log.e("€€€€€€€€€€","REALEASED")
+                    animation()
 
                 return true
             }
@@ -46,19 +50,26 @@ class PointView: View{
 
 
     fun init() {
-        mTextPaint.setARGB (255, 255, 0, 0)
+        whitePaint.setARGB (255, 255, 255, 255)
+        whitePaint.setStyle(Paint.Style.FILL)
+        redPaint.setARGB(255,255,0,0)
+        redPaint.setStyle(Paint.Style.FILL)
     }
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
-        init()
-        canvas.drawCircle(x0, y0,50F, mTextPaint)
+        canvas.drawCircle(x0, y0,50F, whitePaint)
+        canvas.drawCircle(x0, y0, r, redPaint)
 
     }
 
-    override fun onCreateContextMenu(menu: ContextMenu?) {
-        super.onCreateContextMenu(menu)
+    fun animation(){
+        /*for(i in 1..1000) {
+            Thread.sleep(1)
+            r = 48F * (1000-i)/1000
+            invalidate()
+        }*/
     }
 
 }
