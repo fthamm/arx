@@ -12,7 +12,7 @@ class ProfileAdapter(private val userList: Array<User>): RecyclerView.Adapter<Pr
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         holder?.txtName?.text = userList[position].name
-        holder?.txtTitle?.text = userList[position].title
+        holder?.txtTitle?.text = userList[position].tags[0]
 
     }
 
