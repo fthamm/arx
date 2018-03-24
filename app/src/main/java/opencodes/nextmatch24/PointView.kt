@@ -17,11 +17,13 @@ class PointView: View{
     var whitePaint: Paint = Paint()
     var redPaint: Paint = Paint()
     var r: Float = 48F
+    var fragment: QuizFragment
 
     var x0: Float = Float.MAX_VALUE
     var y0: Float = Float.MAX_VALUE
 
-    constructor(context: Context): super(context) {
+    constructor(context: Context, fragment: QuizFragment): super(context) {
+        this.fragment = fragment
         init()
         setOnTouchListener(object : View.OnTouchListener {
             override fun onTouch(v: View?, event: MotionEvent): Boolean {
@@ -33,7 +35,7 @@ class PointView: View{
 
 
                 if(event.actionMasked == MotionEvent.ACTION_UP)
-                    animation()
+                    released()
 
                 return true
             }
@@ -64,12 +66,13 @@ class PointView: View{
 
     }
 
-    fun animation(){
+    fun released(){
         /*for(i in 1..1000) {
             Thread.sleep(1)
             r = 48F * (1000-i)/1000
             invalidate()
         }*/
+        fragment.nextQuestion()
     }
 
 }
