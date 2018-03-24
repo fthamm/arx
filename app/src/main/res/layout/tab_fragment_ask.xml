@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/questionTextFieldLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="29dp"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="80">
+
+        <EditText
+            android:id="@+id/questionTextField"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/question_field"
+            android:hint="Question"
+            android:maxLines="3"
+            android:minLines="1"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:singleLine="false"
+            android:text="Test"
+            android:theme="@style/QuestionTextField" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/questionTextFieldLayout"
+        android:layout_below="@+id/questionTextFieldLayout"
+        android:layout_marginTop="88dp"
+        android:text="Send" />
 </RelativeLayout>

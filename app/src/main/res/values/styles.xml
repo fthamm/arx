@@ -8,4 +8,13 @@
         <item name="colorAccent">#ffffff</item>
     </style>
 
+    <style name="QuestionTextField" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#576574</item>
+        <item name="colorControlActivated">#ee5253</item>
+    </style>
+
+    <style name="QuestionTextFieldLayout" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">#ee5253</item>
+    </style>
+
 </resources>
