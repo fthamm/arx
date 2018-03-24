@@ -1,20 +1,20 @@
 package opencodes.nextmatch24
 
 import android.os.Bundle
-import android.support.design.widget.CoordinatorLayout
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams.FILL_PARENT
 import android.widget.FrameLayout
-import android.widget.LinearLayout
 import android.widget.TextView
 
 class QuizFragment : Fragment() {
 
     var questions: MutableList<Question> = mutableListOf()
     var counter = 0
+    lateinit var layout: ViewGroup
+    lateinit var newObj: PointView
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var rootView = inflater!!.inflate(R.layout.tab_fragment_quiz, container, false)
@@ -33,11 +33,19 @@ class QuizFragment : Fragment() {
 
 
 
-    override fun onStart() {
+    /*override fun onStart() {
         super.onStart()
-        var layout : FrameLayout = (activity).findViewById(R.id.AnswerLayout)
+        var layout : ViewGroup = (activity).findViewById(R.id.AnswerLayout)
         var newObj = PointView(context, this)
-        //coLayout.removeAllViews()
+        layout.addView(newObj, -1, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT))
+    }*/
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("cycle","onResume")
+        layout = (activity).findViewById(R.id.AnswerLayout)
+        newObj = PointView(context, this)
         layout.addView(newObj, -1, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT))
     }
+
 }
