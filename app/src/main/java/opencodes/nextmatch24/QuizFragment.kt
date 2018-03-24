@@ -17,7 +17,7 @@ class QuizFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var rootView = inflater!!.inflate(R.layout.tab_fragment_quiz, container, false)
         var questionLabel = rootView.findViewById<TextView>(R.id.QuestionTextView)
-        questionLabel.setText(questions.get(counter).question)
+        questionLabel.setText(questions.get(counter).question.toString())
         return rootView
     }
 
