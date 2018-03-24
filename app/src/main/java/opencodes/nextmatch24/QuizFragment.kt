@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewGroup.LayoutParams.FILL_PARENT
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 
@@ -33,9 +35,9 @@ class QuizFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        var layout : LinearLayout = (activity).findViewById(R.id.AnswerLayout)
+        var layout : FrameLayout = (activity).findViewById(R.id.AnswerLayout)
         var newObj = PointView(context, this)
         //coLayout.removeAllViews()
-        layout.addView(newObj, 0)
+        layout.addView(newObj, -1, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT))
     }
 }
