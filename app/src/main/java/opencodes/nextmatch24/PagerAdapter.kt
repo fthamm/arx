@@ -23,6 +23,6 @@ class PagerAdapter(fm: FragmentManager, internal var mNumOfTabs: Int) : Fragment
     }
 
     override fun getCount(): Int {
-        return mNumOfTabs
+        return 3
     }
 }

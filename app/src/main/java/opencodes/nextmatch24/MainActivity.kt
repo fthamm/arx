@@ -16,17 +16,15 @@ class MainActivity: AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var tabLayout : TabLayout = findViewById(R.id.tab_layout)
-        tabLayout.addTab(tabLayout.newTab().setText("Quiz"));
-        tabLayout.addTab(tabLayout.newTab().setText("Match"));
-        tabLayout.addTab(tabLayout.newTab().setText("Ask"));
+
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         var viewPager : ViewPager= findViewById(R.id.pager)
         var adapter = PagerAdapter (getSupportFragmentManager(), tabLayout.getTabCount())
         viewPager.setAdapter(adapter)
-        viewPager.addOnPageChangeListener( TabLayout.TabLayoutOnPageChangeListener(tabLayout))
-        /*tabLayout.setOnTabSelectedListener(TabLayout.OnTabSelectedListener() {
-            @Override
+        /*viewPager.addOnPageChangeListener( TabLayout.TabLayoutOnPageChangeListener(tabLayout))
+        tabLayout.setOnTabSelectedListener(TabLayout.OnTabSelectedListener() {
+            override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
             }
@@ -41,17 +39,22 @@ class MainActivity: AppCompatActivity() {
 
             }
         });*/
+        tabLayout.setupWithViewPager(viewPager)
+        tabLayout.getTabAt(0)!!.setText("Quiz")
+        tabLayout.getTabAt(1)!!.setText("Match")
+        tabLayout.getTabAt(2)!!.setText("Ask")
+
     }
 
     /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }
+    }*/
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
+    /*override
+    fun onOptionsItemSelected(item: MenuItem): Boolean {
+        var id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
         }
