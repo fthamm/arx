@@ -13,7 +13,7 @@ import android.support.v7.widget.DefaultItemAnimator
 
 class MatchFragment : Fragment() {
 
-    private val matches = arrayOf<User>(User("Ernst Schmachtenberg", "Emoji1"), User("Angela Merkel", "Emoji2"), User("Elon Musk", "Emoji1, Emoji2"), User("Paul", "Mr"), User("Paul", "Mr"), User("Paul", "Mr"), User("Paul", "Mr"), User("Paul", "Mr"), User("Paul", "Mr"), User("Paul", "Mr"), User("Paul", "Mr"), User("Paul", "Mr"), User("Paul", "Mr"), User("Paul", "Mr"))
+    private val matches = arrayOf<User>(User("Ernst Schmachtenberg", arrayListOf<String>("\uD83D\uDC60","\uD83C\uDFA9" , "\uD83D\uDC60"), ""), User("Angela Merkel", arrayListOf<String>("\uD83C\uDFA9 , \uD83D\uDC60"), ""), User("Elon Musk", arrayListOf<String>("Emoji1, Emoji2"), ""))
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater!!.inflate(R.layout.tab_fragment_match, container, false)

@@ -1,3 +1,3 @@
 package opencodes.nextmatch24
 
-data class User(val name: String, val title: String)
+data class User(val name: String, val tags: ArrayList<String>, val pic: String)
