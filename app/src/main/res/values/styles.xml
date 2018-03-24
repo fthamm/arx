@@ -3,11 +3,10 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">#ff9f43</item>
+        <item name="colorPrimaryDark">#ff9f43</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorBackground">@color/colorAccent</item>
-        <item name="android:textColor">@color/colorText</item>
     </style>
 
     <style name="QuestionTextField" parent="Theme.AppCompat.Light">
