@@ -15,6 +15,13 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        val question1 = Question("Question 1?", "🤣", "😎", "🤑")
+        val question2 = Question("Question 2?", "\uD83D\uDC60", "\uD83C\uDFA9", "\uD83D\uDC8E")
+        val question3 = Question("Question 3?", "❤", "\uD83E\uDDE0", "\uD83D\uDE4C")
+
+        val questions = mutableListOf(question1, question2, question3)
+
         var tabLayout : TabLayout = findViewById(R.id.tab_layout)
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
@@ -43,6 +50,7 @@ class MainActivity: AppCompatActivity() {
         tabLayout.getTabAt(0)!!.setText("Quiz")
         tabLayout.getTabAt(1)!!.setText("Match")
         tabLayout.getTabAt(2)!!.setText("Ask")
+
 
     }
 
