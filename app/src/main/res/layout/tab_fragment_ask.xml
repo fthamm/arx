@@ -4,53 +4,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#ee5253">
 
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/questionTextFieldLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="70dp"
-        android:paddingHorizontal="0dp"
-        android:paddingVertical="0dp"
-        app:counterEnabled="true"
-        app:counterMaxLength="80">
+    <LinearLayout
+        android:id="@+id/CardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/questionTextField"
-            android:layout_width="362dp"
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/question_field"
-            android:maxLines="3"
-            android:minLines="1"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="10dp"
-            android:singleLine="false"
-            android:text="Test"
-            android:theme="@style/QuestionTextField" />
-    </android.support.design.widget.TextInputLayout>
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="2dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/questionTextFieldLayout"
+                android:layout_margin="16dp"
+                android:text="Question 5" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/questionTextFieldLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="36dp"
+                android:gravity="bottom"
+                app:counterEnabled="true"
+                app:counterMaxLength="80">
+
+                <EditText
+                    android:id="@+id/questionTextField"
+                    android:layout_width="362dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:autoText="false"
+                    android:background="@android:color/white"
+                    android:gravity="top"
+                    android:maxLines="3"
+                    android:minLines="3"
+                    android:padding="10dp"
+                    android:singleLine="false"
+                    android:textAllCaps="false"
+                    android:textColor="#ee5253"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:theme="@style/QuestionTextField" />
+            </android.support.design.widget.TextInputLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 
 
-    <Button
-        android:id="@+id/send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/questionTextFieldLayout"
-        android:layout_below="@+id/questionTextFieldLayout"
-        android:layout_marginTop="88dp"
-        android:text="Send" />
+    <LinearLayout
+        android:id="@+id/AnswersLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom|right"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/questionTextFieldLayout"
-        android:layout_marginTop="30dp"
-        android:text="You want to ask your own Question? Just type it in and be patient for new matches:" />
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@android:color/white"
+            android:text="Save" />
+    </LinearLayout>
 </RelativeLayout>
