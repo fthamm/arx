@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Tab 3"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/user_icon"
+            android:layout_toStartOf="@+id/user_settings"
+            android:gravity="center_vertical"
+            android:text="Philipp Hugenroth"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/user_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/user_name"
+            android:layout_alignParentEnd="true"
+            android:paddingRight="5dp"
+            app:srcCompat="@android:drawable/ic_menu_preferences" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+        </ListView>
+
+    </LinearLayout>
 
 </RelativeLayout>
