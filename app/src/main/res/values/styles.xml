@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">#ff9f43</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorBackground">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorText</item>
     </style>
 
     <style name="QuestionTextField" parent="Theme.AppCompat.Light">

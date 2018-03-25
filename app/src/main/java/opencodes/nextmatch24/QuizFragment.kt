@@ -24,13 +24,13 @@ class QuizFragment : Fragment() {
     }
 
     fun nextQuestion() {
-        if(counter + 1 < questions.size) {
+        if (counter + 1 < questions.size) {
             counter++
         }
         var questionLabel = activity.findViewById<TextView>(R.id.QuestionTextView)
         questionLabel.setText(questions.get(counter).question)
     }
-
+}
 
 
     /*override fun onStart() {
@@ -41,4 +41,4 @@ class QuizFragment : Fragment() {
         layout.addView(newObj, -1, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT))
     }
 
-}
+}*/
