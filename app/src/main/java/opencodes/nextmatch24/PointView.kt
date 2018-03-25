@@ -17,8 +17,8 @@ class PointView: View{
     var r: Float = 46F
     var fragment: QuizFragment
 
-    var x0: Float = 300F
-    var y0: Float = 300F
+    var x0: Float = 540F
+    var y0: Float = 503F
 
     constructor(context: Context, fragment: QuizFragment): super(context) {
         Log.e("cycle","constructor")
@@ -43,10 +43,10 @@ class PointView: View{
 
 
     fun init() {
+        redPaint.color = ContextCompat.getColor(context, R.color.colorPrimary)
+        redPaint.setStyle(Paint.Style.FILL)
         whitePaint.setARGB (255, 255, 255, 255)
         whitePaint.setStyle(Paint.Style.FILL)
-        redPaint.color = ContextCompat.getColor(context, R.color.colorPrimary);
-        redPaint.setStyle(Paint.Style.FILL)
     }
 
     override fun onDraw(canvas: Canvas) {
@@ -54,8 +54,8 @@ class PointView: View{
 
         Log.e("cycle","onDraw")
 
-        canvas.drawCircle(x0, y0,50F, whitePaint)
-        canvas.drawCircle(x0, y0, r, redPaint)
+        canvas.drawCircle(x0, y0, 50F, redPaint)
+        canvas.drawCircle(x0, y0,r, whitePaint)
     }
 
     fun released(){
