@@ -57,6 +57,7 @@ class MainActivity: AppCompatActivity() {
         tabLayout.getTabAt(2)!!.setText("Ask")
 
 
+
     }
 
     /*@Override

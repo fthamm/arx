@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.TextView
 import opencodes.nextmatch24.MainActivity.Companion.questions
@@ -28,6 +29,11 @@ class QuizFragment : Fragment() {
         answerView1.setText(questions.get(counter).answer1)
         answerView2.setText(questions.get(counter).answer2)
         answerView3.setText(questions.get(counter).answer3)
+
+        var button = rootView.findViewById<Button>(R.id.skip)
+        button.setOnClickListener {
+            nextQuestion()
+        }
         return rootView
     }
 
