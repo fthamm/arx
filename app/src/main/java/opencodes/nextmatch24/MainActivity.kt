@@ -11,6 +11,10 @@ import android.view.MenuItem
 
 class MainActivity: AppCompatActivity() {
 
+    companion object {
+        var questions: MutableList<Question> = mutableListOf()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
