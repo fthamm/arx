@@ -17,8 +17,8 @@
 
     <LinearLayout
         android:id="@+id/layout"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:gravity="center_vertical"
@@ -40,5 +40,12 @@
             android:textSize="16sp" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:layout_gravity="right"
+        app:srcCompat="@drawable/message_icon" />
 
 </GridLayout>
