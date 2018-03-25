@@ -20,20 +20,20 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val question1 = Question("What kind of food do you prefer?", "\uD83C\uDF4F", "\uD83E\uDD69", "\uD83C\uDF69")
-        val question2 = Question("What is more important for you?", "\uD83D\uDCDA", "\uD83C\uDFCB", "\uD83D\uDECC")
-        val question3 = Question("Which animal would you like to be?", "\uD83D\uDC18", "\uD83D\uDC01", "\uD83D\uDC2C")
+        val question1 = Question("Your reaction when you realize it´s Friday", "\uD83D\uDE0D", "\uD83D\uDE00", "\uD83D\uDE0F")
+        val question2 = Question("What was first?", "\uD83E\uDD5A", "\uD83D\uDC13", "\uD83E\uDD84")//dino
+        val question3 = Question("Do you think this question makes any sense?", "\uD83E\uDD84", "\uD83C\uDF7F", "\uD83C\uDF71")
         val question4 = Question("What would you watch on TV?", "\uD83D\uDDD1", "\uD83C\uDF93", "\uD83C\uDFF9")
-        val question5 = Question("How sporty are you?", "\uD83C\uDF69", "\uD83D\uDEB4", "\uD83E\uDD56")
+        val question5 = Question("Whats your sports type?", "\uD83C\uDF69", "\uD83D\uDEB4", "\uD83E\uDD56")
         val question6 = Question("How do you spend a day off?", "\uD83D\uDCBB", "\uD83D\uDECF", "\uD83C\uDF1E")
 
         //questions = ArrayList(question1, question2, question3)
+        questions.add(question6)
         questions.add(question1)
         questions.add(question2)
-        questions.add(question3)
         questions.add(question4)
         questions.add(question5)
-        questions.add(question6)
+        questions.add(question3)
         var tabLayout : TabLayout = findViewById(R.id.tab_layout)
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
