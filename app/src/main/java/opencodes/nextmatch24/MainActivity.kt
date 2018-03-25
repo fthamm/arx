@@ -20,14 +20,20 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val question1 = Question("Question 1? \uD83D\uDC60 ! ", "🤣", "😎", "🤑")
-        val question2 = Question("Question 2? \uD83E\uDD23 ! ", "\uD83D\uDC60", "\uD83C\uDFA9", "\uD83D\uDC8E")
-        val question3 = Question("Question 3? \uD83D\uDE00 ! ", "❤", "\uD83E\uDDE0", "\uD83D\uDE4C")
+        val question1 = Question("What kind of food do you prefer?", "\uD83C\uDF4F", "\uD83E\uDD69", "\uD83C\uDF69")
+        val question2 = Question("What is more important for you?", "\uD83D\uDCDA", "\uD83C\uDFCB", "\uD83D\uDECC")
+        val question3 = Question("Which animal would you like to be?", "\uD83D\uDC18", "\uD83D\uDC01", "\uD83D\uDC2C")
+        val question4 = Question("What would you watch on TV?", "\uD83D\uDDD1", "\uD83C\uDF93", "\uD83C\uDFF9")
+        val question5 = Question("How sporty are you?", "\uD83C\uDF69", "\uD83D\uDEB4", "\uD83E\uDD56")
+        val question6 = Question("How do you spend a day off?", "\uD83D\uDCBB", "\uD83D\uDECF", "\uD83C\uDF1E")
 
         //questions = ArrayList(question1, question2, question3)
         questions.add(question1)
         questions.add(question2)
         questions.add(question3)
+        questions.add(question4)
+        questions.add(question5)
+        questions.add(question6)
         var tabLayout : TabLayout = findViewById(R.id.tab_layout)
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
