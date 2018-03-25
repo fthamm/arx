@@ -1,5 +1,5 @@
 
-# NextMatch24
+# Arx
 OpenCodes Hackathon 2018  - Tinder is so 2017
 
 ## The pitch
@@ -10,9 +10,13 @@ The clue with the questions? The answers are emojicons 👍👌
 
 ## The team
 Phillip Hugenroth (RWTH)
+
 Georg Ahnert (RWTH)
+
 Fabian Hamm (RWTH)
+
 Jannik Hellenkamp (RWTH)
+
 
 ## Technical details
 Build for Android using Kotlin.
