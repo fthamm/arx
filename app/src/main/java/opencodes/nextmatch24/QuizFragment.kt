@@ -30,15 +30,14 @@ class QuizFragment : Fragment() {
         var questionLabel = activity.findViewById<TextView>(R.id.QuestionTextView)
         questionLabel.setText(questions.get(counter).question)
     }
-}
 
 
     override fun onStart() {
         super.onStart()
-        var layout : ViewGroup = (activity).findViewById(R.id.AnswerLayout)
+        var layout: ViewGroup = (activity).findViewById(R.id.AnswerLayout)
         var newObj = PointView(context, this)
         //coLayout.removeAllViews()
-        layout.addView(newObj, -1, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT))
+        layout.addView(newObj, -1, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
     }
 
 }
