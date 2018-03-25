@@ -13,12 +13,12 @@ import android.support.v7.widget.DefaultItemAnimator
 
 class MatchFragment : Fragment() {
 
-    private val matches = arrayOf<User>(User("Ernst Schmachtenberg", arrayListOf<String>("\uD83D\uDC60","\uD83C\uDFA9" , "\uD83D\uDC60"), ""), User("Angela Merkel", arrayListOf<String>("\uD83C\uDFA9 , \uD83D\uDC60"), ""), User("Elon Musk", arrayListOf<String>("Emoji1, Emoji2"), ""))
+    private val matches = arrayOf<User>(User("Ernst Schmachtenberg", arrayListOf<String>("\uD83D\uDC60","\uD83C\uDFA9" , "\uD83D\uDC60"), R.drawable.schmachti), User("Angela Merkel", arrayListOf<String>("\uD83C\uDFA9 ", "\uD83D\uDC60"), R.drawable.angie), User("Elon Musk", arrayListOf<String>("\uD83C\uDFA9" , "\uD83D\uDC60"), R.drawable.elon))
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater!!.inflate(R.layout.tab_fragment_match, container, false)
         // 1. get a reference to recyclerView
-        val recyclerView = rootView.findViewById<RecyclerView>(R.id.list) as RecyclerView
+        val recyclerView = rootView.findViewById<RecyclerView>(R.id.list)
 
         // 2. set layoutManger
         recyclerView.layoutManager = LinearLayoutManager(activity)
@@ -28,11 +28,9 @@ class MatchFragment : Fragment() {
 
 
         // 3. create an adapter
-        val mAdapter = ProfileAdapter(itemsData)
+        val adapter = ProfileAdapter(itemsData)
         // 4. set adapter
-        recyclerView.adapter = mAdapter
-        // 5. set item animator to DefaultAnimator
-        recyclerView.itemAnimator = DefaultItemAnimator()
+        recyclerView.adapter = adapter
 
         return rootView
     }
