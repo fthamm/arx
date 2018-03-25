@@ -33,7 +33,7 @@ class QuizFragment : Fragment() {
 }
 
 
-    /*override fun onStart() {
+    override fun onStart() {
         super.onStart()
         var layout : ViewGroup = (activity).findViewById(R.id.AnswerLayout)
         var newObj = PointView(context, this)
@@ -41,4 +41,4 @@ class QuizFragment : Fragment() {
         layout.addView(newObj, -1, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT))
     }
 
-}*/
+}
