@@ -26,7 +26,7 @@ class QuizFragment : Fragment() {
         var answerView3 = rootView.findViewById<TextView>(R.id.textAnswer3)
         questionLabel.setText(questions.get(counter).question)
         answerView1.setText(questions.get(counter).answer1)
-        answerView2.setText(questions.get(counter).answer3)
+        answerView2.setText(questions.get(counter).answer2)
         answerView3.setText(questions.get(counter).answer3)
         return rootView
     }
@@ -34,6 +34,8 @@ class QuizFragment : Fragment() {
     fun nextQuestion() {
         if (counter + 1 < questions.size) {
             counter++
+        } else {
+            counter = 0
         }
         Log.e("size",questions.toString())
         var questionLabel = activity.findViewById<TextView>(R.id.QuestionTextView)
@@ -42,7 +44,7 @@ class QuizFragment : Fragment() {
         var answerView3 = activity.findViewById<TextView>(R.id.textAnswer3)
         questionLabel.setText(questions.get(counter).question)
         answerView1.setText(questions.get(counter).answer1)
-        answerView2.setText(questions.get(counter).answer3)
+        answerView2.setText(questions.get(counter).answer2)
         answerView3.setText(questions.get(counter).answer3)
     }
 
