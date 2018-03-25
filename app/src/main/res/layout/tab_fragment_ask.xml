@@ -26,7 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/questionTextFieldLayout"
             android:layout_margin="16dp"
-            android:text="New Question" />
+            android:text="New Question"
+            android:textColor="@color/cardview_dark_background" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/questionTextFieldLayout"
