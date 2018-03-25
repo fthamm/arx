@@ -2,6 +2,7 @@ package opencodes.nextmatch24
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.view.ViewPager
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -54,6 +55,9 @@ class QuizFragment : Fragment() {
         answerView1.setText(questions.get(curr).answer1)
         answerView2.setText(questions.get(curr).answer2)
         answerView3.setText(questions.get(curr).answer3)
+
+        var questionSetTextView = activity.findViewById<TextView>(R.id.QuestionSetTextView)
+        questionSetTextView.setText("Ben's High School Quiz – " + (curr+1) + " / " + questions.size)
     }
 
     override fun onStart() {
@@ -62,6 +66,9 @@ class QuizFragment : Fragment() {
         var newObj = PointView(context, this)
         //coLayout.removeAllViews()
         layout.addView(newObj, -1, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
+
+        var questionSetTextView = activity.findViewById<TextView>(R.id.QuestionSetTextView)
+        questionSetTextView.setText("Ben's High School Quiz – " + (curr+1) + " / " + questions.size)
     }
 }
 

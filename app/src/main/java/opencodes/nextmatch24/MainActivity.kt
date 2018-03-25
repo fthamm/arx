@@ -4,16 +4,15 @@ import android.os.Bundle
 import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
-import android.view.Menu
-import android.view.MenuItem
 
 
 class MainActivity: AppCompatActivity() {
 
+
     companion object {
         var questions: ArrayList<Question> = ArrayList()
         var curr: Int = 0
+        
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

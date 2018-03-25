@@ -3,7 +3,7 @@ package opencodes.nextmatch24
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
-import opencodes.nextmatch24.MainActivity.Companion.questions
+import android.support.v4.view.ViewPager
 
 class PagerAdapter(fm: FragmentManager, internal var mNumOfTabs: Int) : FragmentStatePagerAdapter(fm) {
 

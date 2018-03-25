@@ -11,7 +11,6 @@ import android.widget.TextView
 import opencodes.nextmatch24.MainActivity.Companion.questions
 import android.widget.Toast
 import opencodes.nextmatch24.MainActivity.Companion.curr
-import java.util.*
 
 class AskFragment : Fragment() {
 
@@ -37,7 +36,6 @@ class AskFragment : Fragment() {
                 Log.e("size", questions.size.toString())
                 Toast.makeText(rootView.context, "Added Question", Toast.LENGTH_SHORT).show()
                 Log.v("Button onclick", questions.toString())
-
         }
 
 

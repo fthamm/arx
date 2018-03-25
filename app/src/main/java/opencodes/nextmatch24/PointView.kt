@@ -4,11 +4,13 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.support.v4.content.ContextCompat
+import android.support.v4.view.ViewPager
 import android.text.TextPaint
 import android.util.AttributeSet
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
 
 class PointView: View{
 
@@ -33,8 +35,14 @@ class PointView: View{
                 invalidate()
 
 
+
                 if(event.actionMasked == MotionEvent.ACTION_UP)
                     released()
+
+                if(event.actionMasked == MotionEvent.ACTION_CANCEL){
+                    x0 = 540F
+                    y0 = 503F
+                }
 
                 return true
             }
