@@ -14,7 +14,7 @@ class PointView: View{
 
     var whitePaint: Paint = Paint()
     var redPaint: Paint = Paint()
-    var r: Float = 46F
+    var r: Float = 60F
     var fragment: QuizFragment
 
     var x0: Float = 540F
@@ -54,12 +54,14 @@ class PointView: View{
 
         Log.e("cycle","onDraw")
 
-        canvas.drawCircle(x0, y0, 50F, redPaint)
+        canvas.drawCircle(x0, y0, 70F, redPaint)
         canvas.drawCircle(x0, y0,r, whitePaint)
     }
 
     fun released(){
         fragment.nextQuestion()
+        x0 = 540F
+        y0 = 503F
     }
 
 }

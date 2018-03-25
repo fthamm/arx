@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import opencodes.nextmatch24.MainActivity.Companion.questions
 import android.widget.Toast
+import opencodes.nextmatch24.MainActivity.Companion.curr
 import java.util.*
 
 class AskFragment : Fragment() {
@@ -31,7 +32,8 @@ class AskFragment : Fragment() {
                 answerField1.setText("")
                 answerField2.setText("")
                 answerField3.setText("")
-                questions.add(questions.size, question)
+                questions.add(curr+1, question)
+                curr = curr+1
                 Log.e("size", questions.size.toString())
                 Toast.makeText(rootView.context, "Added Question", Toast.LENGTH_SHORT).show()
                 Log.v("Button onclick", questions.toString())

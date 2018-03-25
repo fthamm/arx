@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="1dp"
-    android:background="#ee5253">
+    android:layout_marginBottom=".5dp"
+    android:background="@android:color/white">
 
     <ImageView
         android:id="@+id/matchImg"
@@ -18,7 +18,8 @@
     <LinearLayout
         android:id="@+id/layout"
         android:layout_width="wrap_content"
-        android:layout_height="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:clipChildren="false"
         android:clipToPadding="false"
         android:gravity="center_vertical"
@@ -29,7 +30,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@color/colorPrimary" />
 
         <TextView
             android:id="@+id/txtTag"
@@ -37,15 +39,17 @@
             android:layout_height="wrap_content"
             android:text="Occupation"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimary"
             android:textSize="16sp" />
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="88dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_gravity="right"
-        app:srcCompat="@drawable/message_icon" />
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/message_red" />
 
 </GridLayout>
