@@ -13,7 +13,7 @@ import android.support.v7.widget.DefaultItemAnimator
 
 class MatchFragment : Fragment() {
 
-    private val matches = arrayOf<User>(User("Ernst Schmachtenberg", arrayListOf<String>("\uD83D\uDC60","\uD83C\uDFA9" , "\uD83D\uDC60"), R.drawable.schmachti), User("Angela Merkel", arrayListOf<String>("\uD83C\uDFA9 ", "\uD83D\uDC60"), R.drawable.angie), User("Elon Musk", arrayListOf<String>("\uD83C\uDFA9" , "\uD83D\uDC60"), R.drawable.elon))
+    private val matches = arrayOf<User>(User("Ernst Schmachti", "\uD83D\uDCD6   |   \uD83C\uDFA9   |   \uD83D\uDC60", R.drawable.schmachti), User("Angie Merkel", "\uD83C\uDFA9    |   \uD83D\uDCB6", R.drawable.angie), User("Elon Musk", "\uD83D\uDE80   |   \uD83D\uDEF8", R.drawable.elon), User("Elon Musk", "\uD83D\uDE80   |   \uD83D\uDEF8", R.drawable.elon), User("Elon Musk", "\uD83D\uDE80   |   \uD83D\uDEF8", R.drawable.elon), User("Elon Musk", "\uD83D\uDE80   |   \uD83D\uDEF8", R.drawable.elon), User("Elon Musk", "\uD83D\uDE80   |   \uD83D\uDEF8", R.drawable.elon), User("Elon Musk", "\uD83D\uDE80   |   \uD83D\uDEF8", R.drawable.elon), User("Elon Musk", "\uD83D\uDE80   |   \uD83D\uDEF8", R.drawable.elon))
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val rootView = inflater!!.inflate(R.layout.tab_fragment_match, container, false)

@@ -13,7 +13,7 @@ class ProfileAdapter(private val userList: Array<User>): RecyclerView.Adapter<Pr
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         holder?.txtName?.text = userList[position].name
-        holder?.txtTag?.text = userList[position].tags[0]
+        holder?.txtTag?.text = userList[position].tags
         holder?.matchImg?.setImageResource(userList[position].pic)
     }
 
