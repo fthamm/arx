@@ -12,40 +12,43 @@ import opencodes.nextmatch24.MainActivity.Companion.questions
 
 class QuizFragment : Fragment() {
 
-    var counter = 0
     lateinit var layout: ViewGroup
     lateinit var newObj: PointView
+    var curr: Int = opencodes.nextmatch24.MainActivity.Companion.curr
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var rootView = inflater!!.inflate(R.layout.tab_fragment_quiz, container, false)
+
+        this.curr = opencodes.nextmatch24.MainActivity.Companion.curr
 
 
         var questionLabel = rootView.findViewById<TextView>(R.id.QuestionTextView)
         var answerView1 = rootView.findViewById<TextView>(R.id.textAnswer1)
         var answerView2 = rootView.findViewById<TextView>(R.id.textAnswer2)
         var answerView3 = rootView.findViewById<TextView>(R.id.textAnswer3)
-        questionLabel.setText(questions.get(counter).question)
-        answerView1.setText(questions.get(counter).answer1)
-        answerView2.setText(questions.get(counter).answer2)
-        answerView3.setText(questions.get(counter).answer3)
+        questionLabel.setText(questions.get(curr).question)
+        answerView1.setText(questions.get(curr).answer1)
+        answerView2.setText(questions.get(curr).answer2)
+        answerView3.setText(questions.get(curr).answer3)
         return rootView
     }
 
     fun nextQuestion() {
-        if (counter + 1 < questions.size) {
-            counter++
+        if (curr + 1 < questions.size) {
+            curr++
         } else {
-            counter = 0
+            curr = 0
         }
+        opencodes.nextmatch24.MainActivity.Companion.curr = this.curr
         Log.e("size",questions.toString())
         var questionLabel = activity.findViewById<TextView>(R.id.QuestionTextView)
         var answerView1 = activity.findViewById<TextView>(R.id.textAnswer1)
         var answerView2 = activity.findViewById<TextView>(R.id.textAnswer2)
         var answerView3 = activity.findViewById<TextView>(R.id.textAnswer3)
-        questionLabel.setText(questions.get(counter).question)
-        answerView1.setText(questions.get(counter).answer1)
-        answerView2.setText(questions.get(counter).answer2)
-        answerView3.setText(questions.get(counter).answer3)
+        questionLabel.setText(questions.get(curr).question)
+        answerView1.setText(questions.get(curr).answer1)
+        answerView2.setText(questions.get(curr).answer2)
+        answerView3.setText(questions.get(curr).answer3)
     }
 
     override fun onStart() {

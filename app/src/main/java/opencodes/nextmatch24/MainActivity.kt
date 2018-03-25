@@ -13,6 +13,7 @@ class MainActivity: AppCompatActivity() {
 
     companion object {
         var questions: ArrayList<Question> = ArrayList()
+        var curr: Int = 0
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
