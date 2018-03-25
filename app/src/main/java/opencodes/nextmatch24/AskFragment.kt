@@ -20,7 +20,7 @@ class AskFragment : Fragment() {
 
         var rootView = inflater!!.inflate(R.layout.tab_fragment_ask, container, false)
         var button = rootView.findViewById<Button>(R.id.send)
-        button.setOnClickListener() { v ->
+        button.setOnClickListener() {
 
                 var questionField = rootView.findViewById<TextView>(R.id.questionTextField)
                 var answerField1 = rootView.findViewById<TextView>(R.id.AnswerEdit1)
@@ -31,7 +31,8 @@ class AskFragment : Fragment() {
                 answerField1.setText("")
                 answerField2.setText("")
                 answerField3.setText("")
-                questions.add(question)
+                questions.add(questions.size, question)
+                Log.e("size", questions.size.toString())
                 Toast.makeText(rootView.context, "Added Question", Toast.LENGTH_SHORT).show()
                 Log.v("Button onclick", questions.toString())
 

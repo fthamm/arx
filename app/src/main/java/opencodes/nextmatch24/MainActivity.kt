@@ -12,7 +12,7 @@ import android.view.MenuItem
 class MainActivity: AppCompatActivity() {
 
     companion object {
-        var questions: MutableList<Question> = mutableListOf()
+        var questions: ArrayList<Question> = ArrayList()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

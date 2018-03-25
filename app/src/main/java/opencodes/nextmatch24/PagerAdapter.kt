@@ -13,7 +13,10 @@ class PagerAdapter(fm: FragmentManager, internal var mNumOfTabs: Int) : Fragment
         val question2 = Question("Question 2? \uD83E\uDD23 ! ", "\uD83D\uDC60", "\uD83C\uDFA9", "\uD83D\uDC8E")
         val question3 = Question("Question 3? \uD83D\uDE00 ! ", "❤", "\uD83E\uDDE0", "\uD83D\uDE4C")
 
-        questions = mutableListOf(question1, question2, question3)
+        //questions = ArrayList(question1, question2, question3)
+        questions.add(question1)
+        questions.add(question2)
+        questions.add(question3)
 
         when (position) {
             0 -> {

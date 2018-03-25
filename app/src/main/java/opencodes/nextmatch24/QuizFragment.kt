@@ -24,9 +24,10 @@ class QuizFragment : Fragment() {
     }
 
     fun nextQuestion() {
-        //if (counter + 1 < questions.size) {
+        if (counter + 1 < questions.size) {
             counter++
-        //}
+        }
+        Log.e("size",questions.toString())
         var questionLabel = activity.findViewById<TextView>(R.id.QuestionTextView)
         questionLabel.setText(questions.get(counter).question)
     }
