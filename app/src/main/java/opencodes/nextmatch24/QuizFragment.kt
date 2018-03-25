@@ -8,10 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.TextView
+import opencodes.nextmatch24.MainActivity.Companion.questions
 
 class QuizFragment : Fragment() {
 
-    var questions: MutableList<Question> = mutableListOf()
     var counter = 0
     lateinit var layout: ViewGroup
     lateinit var newObj: PointView
@@ -24,13 +24,12 @@ class QuizFragment : Fragment() {
     }
 
     fun nextQuestion() {
-        if (counter + 1 < questions.size) {
+        //if (counter + 1 < questions.size) {
             counter++
-        }
+        //}
         var questionLabel = activity.findViewById<TextView>(R.id.QuestionTextView)
         questionLabel.setText(questions.get(counter).question)
     }
-
 
     override fun onStart() {
         super.onStart()
@@ -39,5 +38,8 @@ class QuizFragment : Fragment() {
         //coLayout.removeAllViews()
         layout.addView(newObj, -1, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
     }
-
 }
+
+
+
+

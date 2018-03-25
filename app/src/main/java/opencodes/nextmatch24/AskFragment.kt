@@ -8,12 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import opencodes.nextmatch24.MainActivity.Companion.questions
 import android.widget.Toast
 import java.util.*
 
 class AskFragment : Fragment() {
 
-    var questions: MutableList<Question> = mutableListOf()
+    //var questions: MutableList<Question> = mutableListOf()
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
