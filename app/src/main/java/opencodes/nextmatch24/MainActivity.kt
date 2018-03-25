@@ -11,10 +11,22 @@ import android.view.MenuItem
 
 class MainActivity: AppCompatActivity() {
 
+    companion object {
+        var questions: ArrayList<Question> = ArrayList()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val question1 = Question("Question 1? \uD83D\uDC60 ! ", "🤣", "😎", "🤑")
+        val question2 = Question("Question 2? \uD83E\uDD23 ! ", "\uD83D\uDC60", "\uD83C\uDFA9", "\uD83D\uDC8E")
+        val question3 = Question("Question 3? \uD83D\uDE00 ! ", "❤", "\uD83E\uDDE0", "\uD83D\uDE4C")
+
+        //questions = ArrayList(question1, question2, question3)
+        questions.add(question1)
+        questions.add(question2)
+        questions.add(question3)
         var tabLayout : TabLayout = findViewById(R.id.tab_layout)
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
