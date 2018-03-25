@@ -18,8 +18,16 @@ class QuizFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var rootView = inflater!!.inflate(R.layout.tab_fragment_quiz, container, false)
+
+
         var questionLabel = rootView.findViewById<TextView>(R.id.QuestionTextView)
-        questionLabel.setText(questions.get(counter).question.toString())
+        var answerView1 = rootView.findViewById<TextView>(R.id.textAnswer1)
+        var answerView2 = rootView.findViewById<TextView>(R.id.textAnswer2)
+        var answerView3 = rootView.findViewById<TextView>(R.id.textAnswer3)
+        questionLabel.setText(questions.get(counter).question)
+        answerView1.setText(questions.get(counter).answer1)
+        answerView2.setText(questions.get(counter).answer3)
+        answerView3.setText(questions.get(counter).answer3)
         return rootView
     }
 
@@ -29,7 +37,13 @@ class QuizFragment : Fragment() {
         }
         Log.e("size",questions.toString())
         var questionLabel = activity.findViewById<TextView>(R.id.QuestionTextView)
+        var answerView1 = activity.findViewById<TextView>(R.id.textAnswer1)
+        var answerView2 = activity.findViewById<TextView>(R.id.textAnswer2)
+        var answerView3 = activity.findViewById<TextView>(R.id.textAnswer3)
         questionLabel.setText(questions.get(counter).question)
+        answerView1.setText(questions.get(counter).answer1)
+        answerView2.setText(questions.get(counter).answer3)
+        answerView3.setText(questions.get(counter).answer3)
     }
 
     override fun onStart() {
