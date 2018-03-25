@@ -11,7 +11,7 @@ class PagerAdapter(fm: FragmentManager, internal var mNumOfTabs: Int) : Fragment
 
         when (position) {
             0 -> {
-                var qF = QuizFragment()
+                var qF = QuizSelectionFragment()
                 //qF.questions = questions
                 return qF
             }

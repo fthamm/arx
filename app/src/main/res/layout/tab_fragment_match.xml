@@ -52,7 +52,9 @@
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray" />
+            android:background="@android:color/darker_gray"
+            android:clipChildren="false"
+            android:clipToPadding="false" />
     </LinearLayout>
 
 </RelativeLayout>
